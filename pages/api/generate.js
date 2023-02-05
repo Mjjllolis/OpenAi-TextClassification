@@ -28,11 +28,10 @@ export default async function (req, res) {
 
   try {
     const completion = await openai.createCompletion({
-      model: "ada:ft-personal-2023-02-03-03-08-00",
+      model: "ada:ft-personal-2023-02-05-17-50-28",
       //model: "davinci:ft-personal-2023-02-03-03-19-49",
       prompt: generatePrompt(sentence),
-      stop: ": ",
-      best_of: 1,
+      stop: "\\n",
       //requency_penalty: -2,
     });
     res.status(200).json({ result: completion.data.choices[0].text });
