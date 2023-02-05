@@ -52,5 +52,5 @@ export default async function (req, res) {
 }
 
 function generatePrompt(sentence) {
-  return `The topic of ${sentence}:`;
+  return `${sentence} ->`;
 }
